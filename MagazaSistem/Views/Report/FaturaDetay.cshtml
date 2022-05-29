@@ -1,0 +1,194 @@
+﻿@using MagazaSistem.Entites.Models
+@model List<InvoiceAndProduct>
+
+@{
+    ViewBag.Title = "FaturaDetay";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<style>
+    .baslikDiv {
+        width: 1000px;
+        height: 40px;
+        background-color: dodgerblue;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .bilgDiv {
+        width: 1000px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: unset;
+        border-bottom: 1px solid black;
+    }
+
+    .InvoiceListDiv {
+        justify-content: space-between;
+        flex-wrap: unset;
+        display: flex;
+        text-align: center;
+        width: 95%;
+        margin: 15px;
+        margin-left:0px;
+        margin-bottom:15px;
+        
+      
+        border-color: #696868;
+        padding: 0px 25px 0px 25px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #696868;
+    }
+</style>
+
+
+
+<div style="width:1000px; height:100%; border:1px solid black; margin:auto; margin-top:50px;">
+    <div class="baslikDiv"><img src="~/Image/i-letter.png" width="15px" height="15px"> Fatura</div>
+
+    <div class="bilgDiv">
+        <div style="display: flex; justify-content: center; flex-wrap: unset; width: 495px; height: 197px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+            <div style="width:170px;">
+                <ul style="list-style:none;">
+
+                    <li>
+                        Fatura Tarihi
+                    </li>
+                    <li>
+                        Sorumlu
+                    </li>
+                    <li>
+                        Lokasyon
+                    </li>
+                </ul>
+            </div>
+            <div style="width: 200px; font-weight:bold; ">
+                <ul style="list-style:none;">
+                    <li>
+                        @Session["FaturaTarihi"]
+                    </li>
+                    <li>
+                        @ViewBag.Sorumlu
+                    </li>
+                    <li>
+                        Merkez
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style=" display: flex; justify-content: center; flex-wrap: unset; width: 495px; height: 197px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <div style="width:170px;">
+                <ul style="list-style:none;">
+                    <li>
+                        Fatura Numarası
+                    </li>
+
+                </ul>
+            </div>
+            <div style="width: 200px; ">
+                <ul style="list-style: none; font-weight: bold; ">
+                    <li>
+                        @ViewBag.FaturaNo
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="InvoiceListDiv">
+
+        <div style="width:100px;">Fotoğraf</div>
+        <div style="width:100px;">Ürün İsmi</div>
+        <div style="width:100px;">Fiyat</div>
+        <div style="width:100px;">Ara Toplam</div>
+        <div style="width:100px;">İndirim</div>
+        <div style="width:100px;">Kdv</div>
+        <div style="width:100px;">Toplam</div>
+
+    </div>
+
+    @foreach (var aa in Model)
+    {
+
+        <div class="InvoiceListDiv" style="color:black; border-top:1px solid #696868">
+            <div style="width:100px;"><img src="@aa.Product.ProductImage" width="50px" height="50px" /></div>
+            <div style="width:100px;">@aa.Product.ProductName</div>
+            <div style="width:100px;">@aa.Product.ProductPrice TRY</div>
+            <div style="width:100px;">@aa.Product.ProductPrice TRY</div>
+            <div style="width:100px;">0</div>
+            <div style="width:100px;">%18</div>
+            <div style="width:100px;">@aa.Product.ProductPrice TRY</div>
+
+        </div>
+    }
+
+
+
+
+
+
+
+
+
+
+    <div class="bilgDiv" style="height:auto;">
+        <div style="display: flex; justify-content: center; flex-wrap: unset; width: 495px; height: 197px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+     
+        </div>
+
+        <div style=" margin-bottom:15px; display: flex; justify-content: center; flex-wrap: unset; width: 495px; height: 197px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <div style="width:170px;">
+                <ul style="list-style:none;">
+
+                    <li style="border-bottom:1px solid #696868">
+                        Miktar
+                    </li>
+                    <li style="border-bottom: 1px solid #696868 ">
+                        Ara Toplam
+                    </li>
+                    <li style="border-bottom: 1px solid #696868 ">
+                        İndirim
+                    </li>
+                    <li style="border-bottom: 1px solid #696868 ">
+                        Kdv
+                    </li>
+                    <li style="border-bottom: 1px solid #696868 ">
+                        <b>Toplam</b>
+                    </li>
+                </ul>
+
+            </div>
+            <div style="width: 200px; font-weight:bold; ">
+                <ul style="list-style:none;">
+                    <li style="border-bottom: 1px solid #696868 ">
+                        @ViewBag.ToplamAdet Adet
+                    </li>
+                    <li style="border-bottom: 1px solid #696868 ">
+                        @ViewBag.AraToplam TRY
+                    </li>
+                    <li style="border-bottom: 1px solid #696868 ">
+                        @ViewBag.ind TRY
+                    </li>
+                    <li style="border-bottom: 1px solid #696868">
+                        @ViewBag.KDV TRY
+                    </li>
+                    <li style="border-bottom: 1px solid #696868">
+                        @ViewBag.Toplam TRY
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+

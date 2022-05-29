@@ -1,0 +1,48 @@
+﻿ 
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link rel="stylesheet" href="~/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/Css/HomeLayoutCss.css" />
+    <link rel="stylesheet" href="~/Css/add.css" />
+    <link rel="stylesheet" href="~/Css/update.css" />
+    
+
+    <style>
+    </style>
+</head>
+<body style="margin:0;">
+    <div style="height: 100px;">
+        <a href="/Home/Index/"><div style="float: left; margin-left: 100px;"> <img src="/Image/1324013.png" height="80px" width="150px"></div></a>
+        <div style="margin-top: 25px; float: left; color: dodgerblue; font-weight:700; font-size: larger; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> MİRO MAĞAZA YÖNETİM</div>
+
+
+    </div>
+
+
+    <div style="background-color: dodgerblue; height: 50px; margin: 0px;">
+
+        <div style="margin:auto; width:1000px; height: 45px; text-align: center;">
+
+            
+
+            <div class="menuDiv"><a href="/Settings/Index" class="menuText"><div style="float: left;"><img src="/Image/icons8-settings-60.png" height="25px" width="25px"></div> <div style=" float: left; margin-top: 5px; margin-left: 5px;">Ayarlar</div></a> </div></a>
+            <div class="menuDiv"><a href="/Personel/Index" class="menuText"><div style="float: left;"><img src="/Image/icons8-conference-foreground-selected-60.png" height="25px" width="25px"></div> <div style=" float: left; margin-top: 5px; margin-left: 5px;">Çalışanlar</div></a> </div>
+            <div class="menuDiv"><a href="/Pos/Index" class="menuText"><div style="float: left;"><img src="/Image/icons8-cash-register-100.png" height="25px" width="25px"></div> <div style=" float: left; margin-top: 5px; margin-left: 5px;">Satış Ekranı</div></a> </div>
+            <div class="menuDiv"><a href="#" class="menuText"><div style="float: left;"><img src="/Image/icons8-safe-50.png" height="25px" width="25px"></div> <div style=" float: left; margin-top: 5px; margin-left: 5px;">Kasa</div></a> </div>
+            <div class="menuDiv"><a href="" class="menuText"><div style="float: left;"><img src="/Image/icons8-report-64 .png" height="25px" width="25px"></div> <div style=" float: left; margin-top: 5px; margin-left: 5px;">Raporlar</div></a> </div>
+            <div class="menuDiv"> <i class="bi bi-activity"></i> <a href="/Product/Index" class="menuText"><div style="float: left;"><img src="/Image/icons8-product-90.png" height="25px" width="25px"></div> <div style=" float: left; margin-top: 5px; margin-left: 5px;">Ürünler</div></a> </div>
+
+        </div>
+    </div>
+    
+      
+    
+    @RenderBody()
+
+</body>
+</html>

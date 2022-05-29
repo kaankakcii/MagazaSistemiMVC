@@ -1,0 +1,90 @@
+﻿.backPicture {
+    margin: auto;
+    width: auto;
+    height: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.backPictureLogin {
+    margin: auto;
+    width: auto;
+    height: auto;
+    text-align: center;
+    z-index: 1;
+}
+
+.loginBox {
+    position: absolute;
+    left: 38%;
+    right: auto;
+    top: 10%;
+    margin: auto;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(219, 218, 218);
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px rgb(255, 251, 251);
+    text-align: center;
+    background-image: url(/Image/wave-lines-vector-png-photo-15.png);
+}
+
+.loginLogo {
+    margin: auto;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inputDiv {
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+.inputButton {
+    width: 150px;
+    background-color: rgba(100, 148, 237, 0);
+    border: 0px solid cornflowerblue;
+    color: white;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    width: 100px;
+    height: 20px;
+}
+
+
+.divButton {
+    position: relative;
+    top: 100px;
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+    .divButton:hover {
+        background-color: red;
+        transition-duration: 0.4s;
+    }
+
+input:hover {
+    background-color: floralwhite;
+}
+
+a {
+    color: darkblue;
+    font-size: 12px;
+}
+
+    a:hover {
+        color: red;
+        text-decoration-style: none;
+    }

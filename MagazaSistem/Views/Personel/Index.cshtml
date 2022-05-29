@@ -1,0 +1,77 @@
+﻿@using MagazaSistem.Entites.Models
+@model List<Personnel>
+@{
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="productSaveBar">
+    <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><a href="~/Personel/add"><button class="buttonx" style="width:100px; "><span>Ekle</span></button></a></div></div>
+
+    <div class="productSaveText"><p class="p">Personeller</p></div>
+
+</div>
+
+<div class="anaDiv">
+
+
+  
+    @foreach (var personel in Model)
+    {
+
+        <div class="urunDiv">
+            <div class="imgDiv" style="width: 150px;"><img src="~/Image/blank-profile-picture-973460_960_720.jpg" width="150px" height="auto"></div>
+
+            <div class="imgDiv">
+                <ul class="product-ul">
+                    <li class="product-ul-li">
+                        <div class="product-li-row">
+                            <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Adı Soyadı: </b></div>
+                            <div class="product-li-row-text">@personel.PersonelName @personel.PersonelSurname</div>
+                        </div>
+                    </li>
+
+                    <li class="product-ul-li">
+                        <div class="product-li-row">
+                            <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Telefon: </b></div>
+                            <div class="product-li-row-text">@personel.PersonelTelephone</div>
+                        </div>
+                    </li>
+
+                    <li class="product-ul-li">
+                        <div class="product-li-row">
+                            <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Mail: </b></div>
+                            <div class="product-li-row-text">@personel.PersonelMail</div>
+                        </div>
+                    </li>
+                    <li class="product-ul-li">
+                        <div class="product-li-row">
+                            <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Adres: </b></div>
+                            <div class="product-li-row-text">@personel.PersonelAddress</div>
+                        </div>
+                    </li>
+
+                    <li class="product-ul-li">
+                        <div class="product-li-row">
+                            <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>İşe Giriş Tarihi: </b></div>
+                            <div class="product-li-row-text">@personel.PersonelEmploymentDate</div>
+                        </div>
+                    </li>
+
+
+
+                    <li class="product-ul-li">
+                        <div class="product-li-row">
+
+                            <div style="margin-top:5px;" class="product-li-row-text"><a class="buttonx" style="background-color:crimson;" href="/Personel/Delete/@personel.PersonelId"><span><i class="fa-solid fa-trash"></i></span></a></div>
+                            <div style="margin-top:5px;" class="product-li-row-text"><a class="buttonx" href="/Personel/Update/@personel.PersonelId"><span><i class="fa-solid fa-pencil"></i></span></a></div>
+
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+
+    }
+</div>
+

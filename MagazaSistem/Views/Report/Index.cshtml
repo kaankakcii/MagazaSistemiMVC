@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<style>
+
+    .BoxDiv {
+        
+        background-color: dodgerblue;
+        border: 2px solid white;
+        width: 180px;
+        height: 170px;
+        border-radius: 10px;
+        margin-top:50px;
+        margin-left:100px;
+    }
+
+    .inclusive {
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content:center;
+        flex-wrap:unset;
+        text-align: center;
+       
+        }
+
+    .BoxDiv:hover {
+        background-color: dodgerblue;
+        opacity: 0.7;
+        transition-duration: 0.4s;
+    }
+</style>
+
+
+<div class="productSaveBar">
+   
+
+    <div class="productSaveText"><p class="p">Raporlar</p></div>
+
+</div>
+
+
+<div class="inclusive">
+    <a href="/Report/invoiceList" style="text-decoration:none;"><div class="BoxDiv" style=" margin-left:0px; padding-top:10px;"><img width="100px" height="100px" src="~/Image/trade.png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">SATIŞ RAPORU</p> </div></a>
+    <div class="BoxDiv" style=" padding-top:10px;"><img width="100px" height="100px" src="~/Image/box.png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">STOK RAPORU</p> </div>
+    
+
+</div>
+

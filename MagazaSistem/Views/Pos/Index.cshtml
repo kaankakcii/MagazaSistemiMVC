@@ -1,0 +1,178 @@
+﻿@model MagazaSistem.Entites.Models.ProductAndInvoiceProduct
+
+@{
+    Layout = "";
+}
+<html>
+<head>
+    <style>
+        .buttonx {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #3d405b;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 17px;
+            padding: 0px;
+            width: 90px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 0px;
+            height: 30px;
+            margin-top:50px;
+        }
+
+            .buttonx span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+                padding-top:7px;
+            }
+
+                .buttonx span:after {
+                    content: '»';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -15px;
+                    transition: 0.5s;
+                }
+
+            .buttonx:hover span {
+                padding-right: 15px;
+            }
+
+                .buttonx:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+    </style>
+
+
+
+    <link rel="stylesheet" href="~/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/css/pos.css" />
+
+    <style>
+    </style>
+</head>
+<body>
+    <div class=" bannerDiv">
+        <a href="/Home/Index/" class="exitDvi">
+          <span><i class="fa-solid fa-power-off fa-2x" ></i></span>
+        </a>
+        <input value="Barkod..."class="barcodeDiv">
+        <div class="magazaYonetimText">
+
+            Mağaza Yönetim POS
+        </div>
+
+    </div>
+    
+    
+    <div class="containerDiv">
+        <div class="productListDiv">
+            @foreach (var product in Model.Products)
+            {
+
+                
+                <div class="productDiv">
+                    <a href="~/Pos/urunEkle/@product.ProductId" class="productNameDivA">
+                        <div class="productImgDiv"><img src="@product.ProductImage" width="170px" height="250px" /></div>
+                        <div class="productNameDiv">
+                            @product.ProductName
+                        </div>
+
+                        
+                    </a>
+                </div>
+
+            }
+
+        </div>
+
+        <div class="basketDiv">
+
+
+
+            @foreach (var asd in Model.InvoiceAndProducts)
+            {
+
+
+                <div class="productDivs" style="height: 130px; width: auto; background-color: azure; border: 1px solid #808080; margin: 5px; display: flex; justify-content: flex-start; flex-wrap: wrap">
+
+                    <div class="productImgDivs" style="margin:5px; width:100px;"> 
+                    <img src="@asd.Product.ProductImage" width="75px" height="120px" />
+                    </div>
+
+                    <div style="text-align:center; width:100px;">
+                        <p style="padding-top: 35px; font-size: 17px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">@asd.Product.ProductName</p>
+                        <p style="margin-top:-15px; font-size: 12px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">@asd.Product.ProductPrice  TL</p>
+                    </div>
+
+                    <div style=" width:200px; text-align:center;">
+                        <div style="margin-top:5px;" class="product-li-row-text"><a class="buttonx" style="background-color:crimson;" href="/Pos/delete/@asd.InvoiceAndProductId"><span><i class="fa-solid fa-trash"></i></span></a></div>
+                    </div>
+
+
+                </div>
+               
+            }
+
+
+
+
+
+
+        <div class="divText" style="height:100px;">
+            <div class="divTextName" style="width:100px;"><span><i class="fa-solid fa-user fa-3x"></i></span> </div>
+            <div style="width:100px;"><p style="font-weight:bold; margin-top:42px;">@Session["PersonelName"].ToString() @Session["PersonelSurname"].ToString()</p></div>
+            <div class="divTextDeger"><span><p> Fatura Numarasaı: @ViewBag.fat</p></span></div>
+        </div>
+
+            <div class="divText">
+                <div class="divText" style="height:100px;">
+                    <div class="divTextName"><span>Ara Toplam</i></span> </div>
+                    <div class="divTextDeger"><span>@Session["fiyat2"] TL</span></div>
+                </div>
+            </div>
+
+
+            <div class="divText">
+                <div class="divText" style="height:100px;">
+                    <div class="divTextName"><span>KDV</span> </div>
+                    <div class="divTextDeger"><span>@ViewBag.Kdv TL</span></div>
+                </div>
+            </div>
+
+            <div class="divText">
+                <div class="divText" style="height:100px;">
+                    <div class="divTextName"><span>Toplam:</span> </div>
+                    <div class="divTextDeger"><span>@ViewBag.Toplam TL</span></div>
+                </div>
+            </div>
+
+            <div class="divText" style="height:auto;  border:0px; text-align:center; margin-top:20px;">
+
+                <a href="/Pos/faturaEkle "style="margin: auto; text-decoration:none;"
+                <button class="payButton" style="padding-top:50px;">
+                <p >ÖDEME</p>
+                </button>
+                </a>
+            </div>
+
+
+
+        </div>
+
+        
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Settings";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<link rel="stylesheet" href="~/Css/setting.css" />
+
+<div class="settingMainDiv">
+    <ul>
+        <a href="/Category/Index">
+        <li>
+            <div class="liIconDiv">
+                <img src="~/Image/category.png" width="60px" height="60px" style="padding-top:5px;" />
+            </div>
+            <div class="liTextDiv">
+                <p>Kategoriler</p>
+            </div>
+        </li>
+        </a>
+
+        <a href="/Subcategory/Index">
+        <li>
+            <div class="liIconDiv">
+                <img src="~/Image/subcategories .png" width="60px" height="60px" style="padding-top:5px;" />
+            </div>
+            <div class="liTextDiv">
+                <p>Alt Kategoriler</p>
+            </div>
+        </li>
+        </a>
+    </ul>
+
+    <ul>
+        <a href="/Brand/Index">
+        <li>
+            <div class="liIconDiv">
+                <img src="~/Image/price.png" width="60px" height="60px" style="padding-top:5px;" />
+            </div>
+            <div class="liTextDiv">
+                <p>Markalar</p>
+            </div>
+        </li>
+        </a>
+
+        <a href="/Color/Index">
+<li>
+
+            <div class="liIconDiv">
+                <img src="~/Image/palette.png" width="60px" height="60px" style="padding-top:5px;" />
+
+            </div>
+            <div class="liTextDiv">
+                <p>Renkler</p>
+            </div>
+        </li>
+    </a>
+
+
+    </ul>
+</div>

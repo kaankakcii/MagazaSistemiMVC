@@ -1,0 +1,77 @@
+﻿@model MagazaSistem.Entites.Models.Personnel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/Css/login.css" />
+    
+</head>
+<body style="background-color: cornflowerblue; background-image: url(/Image/PngItem_6513962.png); background-repeat:no-repeat; background-position-x:center;">
+    <div class="loginBox">
+
+        <div class="loginLogo">
+            <img width="270px" height="130px" src="~/Image/1324013.jpg">
+
+        </div>
+        
+        @ViewBag.Message
+        @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+        {
+
+            <div class="inputDiv">
+
+                <a style="color: darkblue; font-weight: bold; font-size: 20px; position: relative; top: 30px;">YÖNETİM PANELİ</a>
+
+                <table style="margin: auto; text-align: center; padding-top: 70px; width: auto;">
+
+                    <tr style="padding-bottom: 50px;">
+                        <td style="background-color: cornflowerblue; height:auto; border-radius: 5px;">
+                            <img width="30px" height="30px" src="~/Image/icons8-male-user-64.png">
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.PersonelMail, new { @class = "form-control", placeholder = "Username" })
+
+                        </td>
+
+                    </tr>
+
+                    <tr style="padding-top: 50px;">
+                        <td style="background-color: cornflowerblue; height:auto; border-radius: 5px;">
+                            <img width="30px" height="30px" src="/Image/icons8-lock-64.png">
+                        </td>
+                        <td>
+                            @Html.PasswordFor(m => m.PersonelPassword, new { @class = "form-control", placeholder = "Password" })
+                        </td>
+
+                    </tr>
+                </table>
+
+                <div class="divButton">
+
+                    <table style="text-align: center; width: 100px; margin: auto;">
+                        <tr>
+                            <td style="width: 30px;"> <img width="30px" height="30px" src="/Image/icons8-login-30.png"></td>
+                            <td>
+                                <button type="submit" class="inputButton" value="GİRİŞ YAP" name="loginButton">
+
+                                    GİRİŞ YAP
+                                </button>
+                            </td>
+
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div style="position: relative; top: 120px; "><a href="#">ŞİFREMİ UNUTTUM</a></div>
+
+            </div>
+
+
+        }
+
+
+</body>
+</html>

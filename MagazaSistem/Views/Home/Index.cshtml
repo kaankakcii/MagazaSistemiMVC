@@ -1,0 +1,118 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .introspectionDiv {
+            margin: auto;
+            width: 1300px;
+            height: 550px;
+        }
+
+        .productsDiv {
+            position: relative;
+            left: 150px;
+            top: 70px;
+            background-color: dodgerblue;
+            border: 2px solid white;
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+        }
+
+            .productsDiv:hover {
+                background-color: dodgerblue;
+                opacity: 0.7;
+                transition-duration: 0.4s;
+            }
+    </style>
+
+
+
+</head>
+
+<body style="background-color: gainsboro;  padding: 0px; margin: 0px;">
+
+    <div style="text-align: center; background-color:white; width: 100%; height: 100px; margin: 0px;">
+        <img style="margin-top: 10px;" width="170px" height="70px" src="~/Image/1324013.jpg">
+
+        <div style="position: absolute; left: 150px; top: 10px; color:rgb(219, 6, 6); font-weight:bold; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <table>
+                <tr>
+                    <td><img src="/Image/icons8-calendar-24 (6).png"></td>
+
+                    <td>@Session["Date"]</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img width="25px" height="25px" src="/Image/icons8-clock-48.png">
+                    </td>
+                    <td>
+                        @Session["Clock"]
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+
+        <div style="position: absolute; right:150px; top: 10px; color:rgb(219, 6, 6); font-weight:bold; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <table>
+                <tr>
+                    <td>@Session["AuthorityName"]</td>
+                    <td><img src="/Image/icons8-cash-register-30.png"></td>
+                </tr>
+                <tr>
+                    <td>@Session["PersonelName"].ToString() @Session["PersonelSurname"].ToString()</td>
+                    <td><img src="/Image/icons8-customer-30.png"></td>
+                </tr>
+
+
+            </table>
+        </div>
+
+
+    </div>
+    <div style="text-align: center; background-color:rgb(255, 255, 255); border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; width: 500px; margin:auto; height: 50px; ">
+        <a style="color: rgb(219, 6, 6); font-weight: bold; font-size: 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">MAĞAZA YÖNETİM SİSTEMİ</a>
+    </div>
+
+
+    <div class="introspectionDiv">
+        <button id="ornek" class="productsDiv" type="button"><a onclick="denet()" id="a" href="/Product/Index"> <img width="100px" height="100px" src="/Image/icons8-product-90.png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ÜRÜNLER</p></a></button>
+        <a href="/Report/Index"><button style="position: relative; left:370px; " class="productsDiv" type="button"><img width="100px" height="100px" src="/Image/icons8-report-64 (1).png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">RAPORLAR</p></button></a>
+        <button style="position: relative; left: 600px;" class="productsDiv" type="button"><img width="100px" height="100px" src="/Image/icons8-safe-50.png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">KASA</p></button>
+
+        <a href="/Pos/faturaEkle/"><button style="position: relative; left: -400px; top: 300px;" class="productsDiv" type="button"><img width="100px" height="100px" src="/Image/icons8-cash-register-100.png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">SATIŞ EKRANI</p></button></a>
+        <a href="/Personel/Index"><button style="position: relative; left: -182px; top: 300px;" class="productsDiv" type="button"><img width="100px" height="100px" src="/Image/icons8-conference-foreground-selected-60.png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">ÇALIŞANLAR</p></button></a>
+        <a href="/Settings/Index"><button style="position: relative; left: 50px; top: 300px;" class="productsDiv" type="button"><img width="100px" height="100px" src="/Image/icons8-settings-60.png"><p style="color: white; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">AYARLAR</p></button></a>
+        <a href="/Login/Logout"><button style=" background-color:red; position: relative; left: 110px; top: 150px; width:100px; height:100px;" class="productsDiv" type="button"><img width="50px" height="50px" src="~/Image/shutdown.png"></button></a>
+
+        
+
+        
+        
+    </div>
+
+    <div style="background-color: white; height: 70px; width:100%; text-align: center;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

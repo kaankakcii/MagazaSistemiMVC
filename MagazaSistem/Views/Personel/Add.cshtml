@@ -1,0 +1,113 @@
+﻿@model MagazaSistem.Entites.Models.Personnel
+@{
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+        <div style="width:auto; height:auto">
+
+
+            @using (Html.BeginForm("Add", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+
+                <div class="productSaveBar">
+                    <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><a href="/Home/Index" class="buttonx" style="background-color: rgba(192, 29, 29, 0.963); padding-top:2px; "><span>İptal Et <i class="fa-solid fa-xmark"></i></span></a></div></div>
+                    <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx"><span>Kaydet <i class="fa-regular fa-square-check"></i></span></button></div></div>
+                    <div class="productSaveText"><p class="p">Personel Ekleme</p></div>
+                </div>
+
+                <div class="form-groupAdd">
+                    <ul>
+
+                        <li style="display:flex;">
+
+                            <div class="liLabelDivAdd">@Html.Label("Personel Adi: ")</div>
+
+                            <div class="liTextBoxDivAdd">  @Html.TextBoxFor(x => x.PersonelName, new { @class = "form-controlAdd" })</div>
+                        </li>
+
+                        <li style="display:flex;">
+
+                            <div class="liLabelDivAdd">
+                                @Html.Label("Personel Soyadi: ")
+                            </div>
+
+                            <div class="liTextBoxDivAdd">
+                                @Html.TextBoxFor(x => x.PersonelSurname, new { @class = "form-controlAdd" })
+                            </div>
+                        </li>
+
+
+                        <li style="display:flex;">
+
+                            <div class="liLabelDivAdd">@Html.Label("Telefon Numarasi ")</div>
+                            <div class="liTextBoxDivAdd">
+                                @Html.TextBoxFor(x => x.PersonelTelephone, new { @class = "form-controlAdd" })
+                            </div>
+                        </li>
+
+                        <li style="display:flex;">
+                            <div class="liLabelDivAdd">
+                                @Html.Label("Mail Adresi: ")
+                            </div>
+                            <div class="liTextBoxDivAdd">
+                                @Html.TextBoxFor(x => x.PersonelMail, new { @class = "form-controlAdd" })
+                            </div>
+                        </li>
+
+                     
+
+                        <li style="display:flex;">
+                            <div class="liLabelDivAdd">@Html.Label("Adres: ")</div>
+                            <div class="liTextBoxDivAdd">
+                                @Html.TextBoxFor(x => x.PersonelAddress, new { @class = "form-controlAdd" })
+                            </div>
+                        </li>
+
+                        <li style="display:flex;">
+                            <div class="liLabelDivAdd">
+                                @Html.Label("İşte Giriş Tarihi: ")
+                            </div>
+                            <div class="liTextBoxDivAdd">
+                                @Html.TextBoxFor(x => x.PersonelEmploymentDate,new { @class = "form-controlAdd" })
+                            </div>
+
+
+                        </li>
+
+                        <li style="display:flex;">
+                            <div class="liLabelDivAdd">
+                                @Html.Label("Yetki")
+                            </div>
+                            <div class="liTextBoxDiv">
+                                @Html.DropDownListFor(x => x.AuthorityId, (List<SelectListItem>)ViewBag.Authorities, new { @class = "form-controlAdd" })
+                            </div>
+                        </li>
+
+
+                        <li style="display:flex;">
+                            <div class="liLabelDivAdd">
+                                @Html.Label("Personel Yaşı")
+                            </div>
+                            <div class="liTextBoxDivAdd">
+                                @Html.TextBoxFor(x => x.PersonelAge, new { @class = "form-controlAdd" })
+                            </div>
+                        </li>
+
+
+                        <li style="display:flex;">
+                            <div class="liLabelDivAdd">
+                                @Html.Label("Personel Maaşı")
+                            </div>
+                            <div class="liTextBoxDivAdd">
+                                @Html.TextBoxFor(x => x.PersonelWage, new { @class = "form-controlAdd" })
+                            </div>
+                        </li>
+                  
+
+
+                    </ul>
+                </div>
+
+            }
+
+
+        </div>

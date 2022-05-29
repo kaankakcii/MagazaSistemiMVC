@@ -1,0 +1,147 @@
+﻿.containerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.productListDiv {
+    padding: 15px;
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+    border: 1px #808080 solid;
+}
+
+.basketDiv {
+    width: 30%;
+    border: 1px #808080 solid;
+    overflow: scroll;
+}
+
+.productDiv {
+    background-color: white;
+    width: 23%;
+    height: 370px;
+    margin: 5px;
+    border: 1px #808080 solid;
+    border-radius: 1px;
+    box-shadow: 0px 3px 2px #808080;
+}
+
+.productImgDiv {
+    margin: auto;
+    margin-top: 10px;
+    width: 85%;
+    height: 270px;
+}
+
+.productNameDiv {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    height: 40px;
+    width: 90%;
+}
+
+.productNameDivA {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.bannerDiv {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.exitDvi {
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    background-color: red;
+    border-radius: 3px;
+    padding-top: 7px;
+    margin-left: 50px;
+    margin-top: 5px;
+    color: white;
+}
+
+.barcodeDiv {
+    margin-left: 20px;
+    margin-top: 6px;
+    width: 900px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 2px #808080;
+    border: 1px #808080 solid;
+}
+
+
+.magazaYonetimText {
+    margin-left: 40px;
+    margin-top: 6px;
+    width: 440px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: dodgerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.divText {
+    border-top: 1px #808080 solid;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.divTextName {
+    width: 100px;
+    height: 100%;
+    margin-top: 20px;
+    color: dodgerblue;
+}
+
+    .divTextName span {
+        margin-left: 20px;
+    }
+
+
+.divTextDeger {
+    width: 50%;
+    height: 100%;
+    text-align: right;
+    color: dodgerblue;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+    .divTextDeger span {
+        margin-right: 20px;
+    }
+
+.payButton {
+    background-color: dodgerblue;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+

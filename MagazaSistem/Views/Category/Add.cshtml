@@ -1,0 +1,51 @@
+﻿@model MagazaSistem.Entites.Models.Category
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div style="width:auto; height:auto">
+
+    @using (Html.BeginForm("Add", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="productSaveBar">
+            <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><a href="/Category/Index" class="buttonx" style="  background-color: rgba(192, 29, 29, 0.963) "><span>İptal Et <i class="fa-solid fa-xmark"></i></span></a></div></div>
+            <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx"><span>Kaydet <i class="fa-regular fa-square-check"></i></span></button></div></div>
+            <div class="productSaveText"><p class="p">Kategori Ekleme</p></div>
+        </div>
+
+        <div class="form-groupAdd">
+            <ul>
+
+                <li style="display:flex;">
+
+                    <div class="liLabelDivAdd">
+                        @Html.Label("Kategori Adı: ")
+                    </div>
+
+                    <div class="liTextBoxDivAdd">
+                        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-controlAdd" })
+                    </div>
+                </li>
+
+
+
+                <li style="display:flex;">
+                    <div class="liLabelDivAdd">
+                        Resim:
+                    </div>
+                    <div class="liTextBoxDivAdd">
+                        <input type="file" name="person" />
+                    </div>
+
+
+                </li>
+
+            </ul>
+        </div>
+
+    }
+
+
+</div>

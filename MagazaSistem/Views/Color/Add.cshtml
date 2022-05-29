@@ -1,0 +1,81 @@
+﻿@model MagazaSistem.Entites.Models.Color
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+<script type="text/javascript">
+function myFunction() {
+    var x = document.getElementById("myColor").value;
+    document.getElementById('demo').value = x;
+
+
+    }
+
+    }
+
+
+</script>
+<div style="width:auto; height:auto">
+
+    @using (Html.BeginForm("Add", "Color", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="productSaveBar">
+            <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><a href="/Color/Index" class="buttonx" style="  background-color: rgba(192, 29, 29, 0.963) "><span>İptal Et <i class="fa-solid fa-xmark"></i></span></a></div></div>
+            <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx"><span>Kaydet <i class="fa-regular fa-square-check"></i></span></button></div></div>
+            <div class="productSaveText"><p class="p">Renk Ekleme</p></div>
+        </div>
+
+        <div class="form-groupAdd">
+            <ul>
+
+                <li style="display:flex;">
+
+                    <div class="liLabelDivAdd">
+                        @Html.Label("Renk Adı: ")
+                    </div>
+
+                    <div class="liTextBoxDivAdd">
+                        @Html.TextBoxFor(x => x.ColorName, new { @class = "form-controlAdd" })
+                    </div>
+                </li>
+
+
+                <li style="display:flex;">
+
+                    <div class="liLabelDivAdd">
+                        @Html.Label("Renk Kodu: ")
+
+                    </div>
+
+                    <div class="liTextBoxDivAdd">
+                        @Html.TextBoxFor(x => x.colorHex, new { @id = "demo", @class = "form-controlAdd" })
+
+                    </div>
+
+                </li>
+                <li style="display:flex;">
+
+                    <div class="liLabelDivAdd">
+
+
+                    </div>
+
+                    <div class="liTextBoxDivAdd">
+                        <input style="border: 1px solid #0682ff; width: 300px; height: 50px;" type="color" id="myColor" onchange="gizle()" />
+                       
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+
+
+
+
+    }
+   
+
+</div>

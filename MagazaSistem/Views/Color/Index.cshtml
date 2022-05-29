@@ -1,0 +1,74 @@
+﻿@using MagazaSistem.Entites.Models
+@model List<Color>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<style>
+    #product-li-row-texts {
+        text-align: center;
+        font-weight: bold;
+        justify-content: center;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: 2px;
+        margin: -5px;
+    }
+</style>
+
+
+
+<div class="productSaveBar">
+    <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><a href="~/Color/add"><button class="buttonx" style="width:100px; "><span>Ekle</span></button></a></div></div>
+
+    <div class="productSaveText"><p class="p">Renkler</p></div>
+
+</div>
+
+
+
+<div class="anaDiv">
+
+
+
+    @foreach (var color in Model)
+    {
+
+        <div class="urunDiv">
+            <div class="imgDiv" style="width:500px;">
+                <ul class="product-ul">
+                    <li class="product-ul-li" style="height:200px; background-color:@color.colorHex; ">
+                        <div class="product-li-row" style="background-color:@color.colorHex;">
+
+                        </div>
+                    </li>
+
+                    <li class="product-ul-li">
+                        <div class="product-li-row">
+                            <div class="product-li-row-text" id="product-li-row-texts">
+                                <div style="width:350px; height:40px; text-align:center; margin-top:5px;">@color.ColorName</div>
+
+                                <div style="text-align:center; width:100px;">
+                                    <div class="product-li-row-text">
+                                        <a class="buttonx" style="background-color:crimson; width:100px; margin-right:-20px; height:40px;" href="/Color/Delete/@color.ColorId"><span style="margin-top:7px;"><i class="fa-solid fa-trash"></i></span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+
+    }
+</div>
+
+

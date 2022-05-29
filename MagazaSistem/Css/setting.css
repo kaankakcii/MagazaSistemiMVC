@@ -1,0 +1,51 @@
+﻿.settingMainDiv {
+    width: 100%;
+    height: 570px;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+ul {
+    border-collapse: collapse;
+    list-style-type: none;
+    margin: 5px;
+    width: 1000px;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    ul li {
+        margin-top: 25px;
+        border-radius: 10px;
+        margin-right: 20px;
+        width: 95%;
+        background-color: dodgerblue;
+        height: 70px;
+        justify-content: flex-start;
+        display: flex;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+li:hover {
+    transition-duration: 0.4s;
+    opacity: 0.6;
+}
+
+.liIconDiv {
+    margin-left: 10px;
+    width: 150px;
+}
+
+
+.liTextDiv {
+    width: 400px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
