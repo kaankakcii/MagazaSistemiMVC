@@ -60,29 +60,9 @@
     <Compile Include="Mapping\PersonnelMap.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
     <Compile Include="Mapping\SubcategoryMap.cs" />
-    <Compile Include="Migrations\202205171349492_oyyy.cs" />
-    <Compile Include="Migrations\202205171349492_oyyy.designer.cs">
-      <DependentUpon>202205171349492_oyyy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205171406103_oyyyy.cs" />
-    <Compile Include="Migrations\202205171406103_oyyyy.designer.cs">
-      <DependentUpon>202205171406103_oyyyy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205181104333_oyyyyyyyyy.cs" />
-    <Compile Include="Migrations\202205181104333_oyyyyyyyyy.designer.cs">
-      <DependentUpon>202205181104333_oyyyyyyyyy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205181214283_oyyyyyyyyyyyyyyyyyyyyyyyy.cs" />
-    <Compile Include="Migrations\202205181214283_oyyyyyyyyyyyyyyyyyyyyyyyy.designer.cs">
-      <DependentUpon>202205181214283_oyyyyyyyyyyyyyyyyyyyyyyyy.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202205182038111_ooyyyyyyyyyyy.cs" />
     <Compile Include="Migrations\202205182038111_ooyyyyyyyyyyy.designer.cs">
       <DependentUpon>202205182038111_ooyyyyyyyyyyy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205191155017_oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.cs" />
-    <Compile Include="Migrations\202205191155017_oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.designer.cs">
-      <DependentUpon>202205191155017_oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202205242213524_databsse3.cs" />
     <Compile Include="Migrations\202205242213524_databsse3.designer.cs">
@@ -115,23 +95,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202205171349492_oyyy.resx">
-      <DependentUpon>202205171349492_oyyy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205171406103_oyyyy.resx">
-      <DependentUpon>202205171406103_oyyyy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205181104333_oyyyyyyyyy.resx">
-      <DependentUpon>202205181104333_oyyyyyyyyy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205181214283_oyyyyyyyyyyyyyyyyyyyyyyyy.resx">
-      <DependentUpon>202205181214283_oyyyyyyyyyyyyyyyyyyyyyyyy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205182038111_ooyyyyyyyyyyy.resx">
       <DependentUpon>202205182038111_ooyyyyyyyyyyy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205191155017_oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.resx">
-      <DependentUpon>202205191155017_oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205242213524_databsse3.resx">
       <DependentUpon>202205242213524_databsse3.cs</DependentUpon>
