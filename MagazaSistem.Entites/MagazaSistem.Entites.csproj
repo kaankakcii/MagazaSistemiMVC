@@ -57,6 +57,7 @@
     <Compile Include="Mapping\ColorMap.cs" />
     <Compile Include="Mapping\InvoiceAndProductMap.cs" />
     <Compile Include="Mapping\InvoiceMap.cs" />
+    <Compile Include="Mapping\MoneyCaseMap.cs" />
     <Compile Include="Mapping\PersonnelMap.cs" />
     <Compile Include="Mapping\ProductMap.cs" />
     <Compile Include="Mapping\SubcategoryMap.cs" />
@@ -76,6 +77,14 @@
     <Compile Include="Migrations\202205242220541_databsse5.designer.cs">
       <DependentUpon>202205242220541_databsse5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206021314035_database6.cs" />
+    <Compile Include="Migrations\202206021314035_database6.designer.cs">
+      <DependentUpon>202206021314035_database6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206021321568_database7.cs" />
+    <Compile Include="Migrations\202206021321568_database7.designer.cs">
+      <DependentUpon>202206021321568_database7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authority.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -84,6 +93,7 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\InvoiceAndProduct.cs" />
     <Compile Include="Models\MagazaSistemContext.cs" />
+    <Compile Include="Models\MoneyCase.cs" />
     <Compile Include="Models\Personnel.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductAndInvoiceProduct.cs" />
@@ -106,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205242220541_databsse5.resx">
       <DependentUpon>202205242220541_databsse5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206021314035_database6.resx">
+      <DependentUpon>202206021314035_database6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206021321568_database7.resx">
+      <DependentUpon>202206021321568_database7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

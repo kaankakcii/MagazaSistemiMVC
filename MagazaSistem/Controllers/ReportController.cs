@@ -68,5 +68,33 @@ namespace MagazaSistem.Controllers
             return View(ınvoicesAndPoducts);
         }
 
+
+        [HttpGet]
+        public ActionResult StokList()
+        {
+
+            List<Product> products = db.Product.Where(x =>x.ProductStatus==true).ToList();
+
+            int ToplamAdet = Convert.ToInt32(((from t in db.Product where t.ProductStatus==true select t.ProductStockAmount).Sum()));
+            ViewBag.ToplamAdet = ToplamAdet;
+            
+            int toplamDeger=0;
+            int toplamDeger2=0;
+           
+
+            for (int i = 0; i < products.Count; i++) {
+
+                toplamDeger = products[i].ProductStockAmount * products[i].ProductPurchasePrice;
+                
+
+                toplamDeger2 = toplamDeger2+toplamDeger;
+
+            }
+
+            ViewBag.ToplamDeger = toplamDeger2;
+
+            return View(products);
+        }
+
     }
 }

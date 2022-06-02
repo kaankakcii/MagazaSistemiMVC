@@ -16,7 +16,7 @@ namespace MagazaSistem.Controllers
         {
             ProductAndInvoiceProduct pıp = new ProductAndInvoiceProduct();
             pıp.Products = db.Product.Where(x=>x.ProductStatus==true).ToList();
-            
+                      
             ViewBag.fat = Session["faturaNo"];
             
             float faturaNo = Convert.ToInt32(Session["faturaNo"]);
@@ -50,7 +50,7 @@ namespace MagazaSistem.Controllers
             
             Product products = db.Product.Find(id); 
             InvoiceAndProduct ınvoiceAndProducts = new InvoiceAndProduct();
-
+            
             int fautraId = Convert.ToInt32(Session["faturaId"]);
             Invoice ınvoices = db.Invoice.Find(fautraId);
 
@@ -82,6 +82,7 @@ namespace MagazaSistem.Controllers
             ınvoices.Kdv = ınvoices.AraToplam * 18 / 100;
             ınvoices.Sorumlu = Convert.ToString(Session["PersonelName"]);
             ınvoices.DüzenlenmeTarihi = DateTime.Now;
+            ınvoices.MoneyCaseId = 1;
 
             db.Invoice.Add(ınvoices);
             db.SaveChanges();

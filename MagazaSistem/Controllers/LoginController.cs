@@ -70,8 +70,6 @@ namespace MagazaSistem.Controllers
 
 
         public ActionResult Logout() {
-
-
             FormsAuthentication.SignOut();
             return RedirectToAction("Login");
         }

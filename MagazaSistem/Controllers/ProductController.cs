@@ -17,7 +17,7 @@ namespace MagazaSistem.Controllers
         {
             List<Product> products = db.Product.Where(x => x.ProductStatus == true).ToList();
             
-
+            
             
             
             return View(products);
@@ -122,6 +122,7 @@ namespace MagazaSistem.Controllers
         public ActionResult Update(int id)
         {
             Product products = db.Product.Find(id);
+            Session["img"] = products.ProductImage;
             /*Kategori*/
             List<SelectListItem> category = db.Category.AsNoTracking().Where(x => x.CategoryStatus == true)
                 .Select(s => new SelectListItem
@@ -170,8 +171,7 @@ namespace MagazaSistem.Controllers
         public ActionResult Update(Product product)
         {
             Product products = db.Product.Find(product.ProductId);
-            product.ProductStatus = true;
-            
+            product.ProductStatus = true; 
             products.ProductStatus = product.ProductStatus;
             products.ProductName = product.ProductName;
             products.ProductStockCode = product.ProductStockCode;
@@ -181,12 +181,14 @@ namespace MagazaSistem.Controllers
             products.ProductDiscountedPrice = product.ProductDiscountedPrice;
             products.ProductStatus = product.ProductStatus;
             products.ProductPurchasePrice = product.ProductPurchasePrice;
+            
+           
 
             products.Brand = db.Brand.Find(product.BrandId);
             products.Category = db.Category.Find(product.CategoryId);
             products.Subcategory = db.Subcategory.Find(product.SubcategoryId);
             products.Color = db.Color.Find(product.ColorId);
-
+            
             if (Request.Files.Count > 0)
             {
                 string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
@@ -202,5 +204,10 @@ namespace MagazaSistem.Controllers
 
             return RedirectToAction("Index");
         }
+
+ 
+
+
+
     }
 }

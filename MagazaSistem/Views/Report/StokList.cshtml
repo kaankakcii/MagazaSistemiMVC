@@ -1,0 +1,188 @@
+﻿@using MagazaSistem.Entites.Models
+@model List<Product>
+@{
+    ViewBag.Title = "invoiceList";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<style>
+    .inclusive {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+    }
+
+
+    .dashboardBox {
+        width: 97%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: unset;
+        text-align: center;
+        margin: auto;
+    }
+
+
+    .BoxDiv {
+        background-color: dodgerblue;
+        border: 2px solid white;
+        width: 350px;
+        height: 150px;
+        border-radius: 5px;
+        margin: 22px;
+        justify-content: space-between;
+        flex-wrap: unset;
+        display: flex;
+        text-align: center;
+    }
+
+    .BoxDiv-div {
+        color: white;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        width: 160px;
+        height: 150px;
+    }
+
+    .InvoiceListDiv {
+        justify-content: space-between;
+        flex-wrap: unset;
+        display: flex;
+        text-align: center;
+        width: 93%;
+        margin: auto;
+        margin-top: 30px;
+        border-bottom: 1px solid;
+        border-color: #696868;
+        padding: 0px 25px 0px 25px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #696868;
+    }
+
+
+    .toplamDeger {
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #696868;
+        background-color:white;
+        border-color:white;
+        
+    }
+
+
+</style>
+
+
+
+<div class="productSaveBar">
+
+
+    <div class="productSaveText"><p class="p">Stok Raporu</p></div>
+
+</div>
+
+<div class="inclusive">
+    <div class="dashboardBox">
+
+        <div class="BoxDiv">
+            <div class="BoxDiv-div"><img style="margin-top:20px; opacity:0.6; " width="100px" height="100px" src="~/Image/barcode.png"></div>
+            <div class="BoxDiv-div">
+                <div style="margin-top:40px; margin-right:25px;">
+                    <h3>@ViewBag.ToplamAdet Adet</h3>
+                    <h6>Stoktaki Ürünler</h6>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="BoxDiv">
+            <div class="BoxDiv-div"><img style="margin-top:20px; opacity:0.6; " width="100px" height="100px" src="~/Image/bank.png"></div>
+            <div class="BoxDiv-div">
+                <div style="margin-top:40px; margin-right:25px;">
+                    <h3>@ViewBag.ToplamDeger TRY</h3>
+                    <h6>Stok Değeri</h6>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="productSaveBar">
+
+
+    <div class="productSaveText"><p class="p">Raporlar</p></div>
+
+</div>
+
+<div class="InvoiceListDiv">
+    <div style="width:100px;">Ürün Adı</div>
+    <div style="width:100px;">Stok Kodu</div>
+    <div style="width:150px;">Barkod Numarası</div>
+    <div style="width:100px;">Adet</div>
+    <div style="width:100px;">Stok Değeri</div>
+
+</div>
+
+
+@foreach (var product in Model)
+{
+    <div>
+        <div class="InvoiceListDiv">
+            <a href="/Product/Update/@product.ProductId" style="text-decoration:none;"><div style="width:100px;">@product.ProductName</div></a>
+            <div style="width:100px;">@product.ProductStockCode</div>
+            <div style="width:150px;">@product.ProductBarcode</div>
+            <div clas="kritikstokRenk" id="deneme" style="width:100px;">@product.ProductStockAmount Adet</div>
+
+            <div style="width:100px;"><input type="button" style="display:none;" class="stokDeger" value="@product.ProductStockAmount">
+            <input type="button" class="fiyatDeger" style="display:none;"     value="@product.ProductPurchasePrice">
+            <input style="border:0px; font-size:16px;"  type="button"  disabled="disabled" id="sonuc" class="toplamDeger"/>
+                     
+            
+            </div>
+
+
+        </div>
+    </div>
+
+
+}
+
+<script>
+
+    window.onload = function gizle() {
+        var stokDeger = document.getElementsByClassName("stokDeger");
+        var stokList = Array.prototype.slice.call(stokDeger);
+
+        var fiyatDeger = document.getElementsByClassName("fiyatDeger");
+        var fiyatList = Array.prototype.slice.call(fiyatDeger);
+
+        var toplamDeger = document.getElementsByClassName("toplamDeger");
+        var toplamList = Array.prototype.slice.call(toplamDeger);
+
+        var toplamDeger = document.getElementsByClassName("kritikstokRenk");
+        var kritikstokRenk = Array.prototype.slice.call(toplamDeger);
+
+        for (var i = 0; i <= stokList.length; i++) {
+
+            var x = parseInt(stokList[i].value);
+            var y = parseInt(fiyatList[i].value);
+            toplamList[i].value = x * y;
+         
+        }
+
+
+
+
+
+    };
+    </script>

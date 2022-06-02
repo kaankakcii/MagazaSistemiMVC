@@ -28,6 +28,7 @@ namespace MagazaSistem.Entites.Models
             modelBuilder.Configurations.Add(new PersonnelMap());
             modelBuilder.Configurations.Add(new InvoiceMap());
             modelBuilder.Configurations.Add(new InvoiceAndProductMap());
+            modelBuilder.Configurations.Add(new MoneyCaseMap());
 
 
         }
@@ -42,6 +43,7 @@ namespace MagazaSistem.Entites.Models
         public DbSet<Personnel> Personnel { get; set; }
         public DbSet<Invoice> Invoice { get; set; }
         public DbSet<InvoiceAndProduct> InvoiceAndProduct { get; set; }
+        public DbSet<MoneyCase> MoneyCase { get; set; }
     }
 
 }

@@ -25,6 +25,8 @@ namespace MagazaSistem.Entites.Mapping
             this.Property(p => p.DüzenlenmeTarihi).HasColumnType("datetime");
             this.Property(p => p.Sorumlu).HasColumnType("varchar");
 
+            this.HasRequired(p => p.MoneyCase).WithMany(p => p.Invoices).HasForeignKey(p => p.MoneyCaseId);
+
 
 
         }

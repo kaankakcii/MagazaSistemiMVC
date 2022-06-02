@@ -132,6 +132,7 @@
     <Compile Include="Controllers\ColorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MoneyCaseController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\PosController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -167,6 +168,7 @@
     <Content Include="Image\blank-profile-picture-973460_960_720.jpg" />
     <Content Include="Image\box.png" />
     <Content Include="Image\category.png" />
+    <Content Include="Image\credit-card.png" />
     <Content Include="Image\gift-box.png" />
     <Content Include="Image\i-letter.png" />
     <Content Include="Image\icons8-calendar-24 %286%29.png" />
@@ -183,7 +185,9 @@
     <Content Include="Image\icons8-report-64 .png" />
     <Content Include="Image\icons8-safe-50.png" />
     <Content Include="Image\icons8-settings-60.png" />
+    <Content Include="Image\money.png" />
     <Content Include="Image\palette.png" />
+    <Content Include="Image\plus.png" />
     <Content Include="Image\PngItem_6513962.png" />
     <Content Include="Image\price-tag.png" />
     <Content Include="Image\price.png" />
@@ -247,6 +251,10 @@
     <Content Include="Views\Report\Index.cshtml" />
     <Content Include="Views\Report\invoiceList.cshtml" />
     <Content Include="Views\Report\FaturaDetay.cshtml" />
+    <Content Include="Views\Report\StokList.cshtml" />
+    <Content Include="Views\MoneyCase\Index.cshtml" />
+    <Content Include="Views\MoneyCase\InvoiceListe.cshtml" />
+    <Content Include="Views\MoneyCase\addMoneyCase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

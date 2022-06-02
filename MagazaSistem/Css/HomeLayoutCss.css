@@ -119,7 +119,7 @@ body {
 }
 
 .product-ul-li {
-    width: 100%;
+    width: 50%;
     height: 40px;
     border-bottom: rgb(221, 218, 218) 1px solid;
     border-collapse: collapse;

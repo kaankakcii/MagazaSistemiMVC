@@ -19,6 +19,11 @@ namespace MagazaSistem.Entites.Models
         public DateTime DüzenlenmeTarihi { get; set; }
         public String Sorumlu { get; set; }
 
+        public virtual MoneyCase MoneyCase { get; set; }
+        public int MoneyCaseId { get; set; }
+        
+
+
 
 
 
