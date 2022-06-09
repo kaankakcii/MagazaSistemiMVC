@@ -1,0 +1,68 @@
+﻿@model MagazaSistem.Entites.Models.Personnel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/Css/login.css" />
+
+</head>
+<body style="background-color: cornflowerblue; background-image: url(/Image/PngItem_6513962.png); background-repeat:no-repeat; background-position-x:center;">
+    <div class="loginBox">
+
+        <div class="loginLogo">
+            <img width="270px" height="130px" src="~/Image/1324013.jpg">
+
+        </div>
+
+        @ViewBag.Message
+        @using (Html.BeginForm("Index", "PasswordForgot", FormMethod.Post))
+        {
+
+    <div class="inputDiv">
+
+        <a style="color: darkblue; font-weight: bold; font-size: 20px; position: relative; top: 30px;">Şifre Yenileme</a>
+
+        <table style="margin: auto; text-align: center; padding-top: 100px; width: auto;">
+
+            <tr style="margin-bottom: 100px;">
+                <td style="width:40px; height:40px; background-color: cornflowerblue; height:auto; border-radius: 5px;">
+                    <img width="30px" height="30px" src="~/Image/email.png">
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.PersonelMail, new { @class = "form-control", placeholder = "Mail" })
+                </td>
+
+            </tr>
+        </table>
+
+        <div class="divButton">
+
+            <table style="text-align: center; width: 100px; margin: auto; margin-top:-20px">
+                <tr>
+                    <td style="width: 30px;"> <img width="30px" height="30px" src="/Image/icons8-login-30.png"></td>
+                    <td>
+                        <button type="submit" class="inputButton" value="Şifre Yenile" name="loginButton">
+                            Şifre Yenile
+                        </button>
+
+
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+        <div style="font-weight: bold; font-size:17px; color: cornflowerblue; margin-top:150px;">@ViewBag.Mesaj</div>
+
+    </div>
+            
+
+        }
+
+    </div>
+    
+    
+</body>
+</html>

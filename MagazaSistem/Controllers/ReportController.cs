@@ -14,6 +14,7 @@ namespace MagazaSistem.Controllers
         public ActionResult Index()
         {
             return View();
+            
         }
 
 
