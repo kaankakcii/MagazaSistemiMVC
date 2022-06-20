@@ -48,8 +48,8 @@ namespace MagazaSistem.Controllers
                 Session["AuthorityName"] = personels.Authority.AuthorityName.ToString();
                 Session["PersonelMail"] = personels.PersonelMail.ToString();
 
-                Session["Date"] = DateTime.Now.Day.ToString();
-                Session["Clock"] = DateTime.Now.Hour.ToString();           
+                Session["Date"] = DateTime.Now.Day+"."+DateTime.Now.Month+"."+DateTime.Now.Year;
+                Session["Clock"] = DateTime.Now.Hour+":"+DateTime.Now.Minute;           
                 
 
 

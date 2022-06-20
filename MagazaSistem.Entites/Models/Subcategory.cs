@@ -12,6 +12,7 @@ namespace MagazaSistem.Entites.Models
     {
         [Key]
         public int SubcategoryId { get; set; }
+        [Required(ErrorMessage = "Lütfen Alt Kategori ismini Giriniz.")]
         public string SubcategoryName { get; set; }
         public bool SubcategoryStatus { get; set; }
         public string Explanation { get; set; }

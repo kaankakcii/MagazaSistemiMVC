@@ -85,6 +85,30 @@
     <Compile Include="Migrations\202206021321568_database7.designer.cs">
       <DependentUpon>202206021321568_database7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206141941203_database61.cs" />
+    <Compile Include="Migrations\202206141941203_database61.designer.cs">
+      <DependentUpon>202206141941203_database61.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142019379_database71.cs" />
+    <Compile Include="Migrations\202206142019379_database71.designer.cs">
+      <DependentUpon>202206142019379_database71.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142134163_database8.cs" />
+    <Compile Include="Migrations\202206142134163_database8.designer.cs">
+      <DependentUpon>202206142134163_database8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142141510_database9.cs" />
+    <Compile Include="Migrations\202206142141510_database9.designer.cs">
+      <DependentUpon>202206142141510_database9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142145019_database10.cs" />
+    <Compile Include="Migrations\202206142145019_database10.designer.cs">
+      <DependentUpon>202206142145019_database10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206142200487_database11.cs" />
+    <Compile Include="Migrations\202206142200487_database11.designer.cs">
+      <DependentUpon>202206142200487_database11.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authority.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -122,6 +146,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206021321568_database7.resx">
       <DependentUpon>202206021321568_database7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206141941203_database61.resx">
+      <DependentUpon>202206141941203_database61.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142019379_database71.resx">
+      <DependentUpon>202206142019379_database71.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142134163_database8.resx">
+      <DependentUpon>202206142134163_database8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142141510_database9.resx">
+      <DependentUpon>202206142141510_database9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142145019_database10.resx">
+      <DependentUpon>202206142145019_database10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206142200487_database11.resx">
+      <DependentUpon>202206142200487_database11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

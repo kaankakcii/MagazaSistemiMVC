@@ -56,6 +56,55 @@ namespace MagazaSistem.Controllers
 
 
 
+
+
+
+
+
+
+
+        [HttpGet]
+        public ActionResult Update(int id)
+        {
+            Category categorys = db.Category.Find(id);
+
+            return View(categorys);
+
+        }
+
+        [HttpPost]
+        public ActionResult Update(Category category)
+        {
+            category.CategoryStatus = true;
+            Category categorys = db.Category.Find(category.CategoryId);
+            categorys.CategoryStatus = category.CategoryStatus;
+            categorys.CategoryName = category.CategoryName;
+
+            try
+            {
+                if (Request.Files.Count > 0)
+                {
+                    string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+
+                    string yol = "~/Image/" + dosyaadi;
+                    Request.Files[0].SaveAs(Server.MapPath(yol));
+                    category.ImageUrl = "/Image/" + dosyaadi;
+
+                }
+            }
+
+            catch { }
+
+
+            
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+
+
+
         public ActionResult Delete(int id)
         {
 

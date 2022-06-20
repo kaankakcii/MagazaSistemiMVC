@@ -27,6 +27,7 @@
                     <div class="liTextBoxDivAdd">
                         @Html.TextBoxFor(x => x.MoneyCaseName, new { @class = "form-controlAdd" })
                     </div>
+                    <div>@Html.ValidationMessageFor(m => m.MoneyCaseName, "", new { @class = "error" })</div>
                 </li>
 
                 <li style="display:flex;">
@@ -47,3 +48,5 @@
 
 
 </div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")

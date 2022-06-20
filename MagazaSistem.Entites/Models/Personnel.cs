@@ -11,10 +11,16 @@ namespace MagazaSistem.Entites.Models
     {
         [Key]
         public int PersonelId { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Personel İsmini Giriniz.")]
         public string PersonelName { get; set; }
         public string PersonelSurname { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Personel Telefonu Giriniz.")]
         public int PersonelTelephone { get; set; }
         public string PersonelPassword { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Personel Mail Adresinizi Giriniz.")]
         public string PersonelMail { get; set; }
         public string PersonelAddress { get; set; }
         public string PersonelEmploymentDate { get; set; }

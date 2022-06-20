@@ -68,6 +68,53 @@ namespace MagazaSistem.Controllers
 
 
 
+
+
+
+
+        public ActionResult Update(int id)
+        {
+            Subcategory subcategorys = db.Subcategory.Find(id);
+            List<SelectListItem> category = db.Category.AsNoTracking().Where(x => x.CategoryStatus == true)
+                .Select(s => new SelectListItem
+                {
+                    Value = s.CategoryId.ToString(),
+                    Text = s.CategoryName
+
+                }).ToList();
+            ViewBag.Categories = category;
+            return View(subcategorys);
+
+        }
+
+        [HttpPost]
+        public ActionResult Update(Subcategory subcategory)
+        {
+            subcategory.SubcategoryStatus = true;
+            Subcategory subcategorys = db.Subcategory.Find(subcategory.SubcategoryId);
+            subcategorys.SubcategoryStatus = subcategory.SubcategoryStatus;
+            subcategorys.SubcategoryName = subcategory.SubcategoryName;
+            subcategorys.Category = db.Category.Find(subcategory.CategoryId);
+
+            try
+            {
+                if (Request.Files.Count > 0)
+                {
+                    string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
+
+                    string yol = "~/Image/" + dosyaadi;
+                    Request.Files[0].SaveAs(Server.MapPath(yol));
+                    subcategory.ImageUrl = "/Image/" + dosyaadi;
+
+                }
+            }
+            catch { }
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Delete(int id)
         {
 

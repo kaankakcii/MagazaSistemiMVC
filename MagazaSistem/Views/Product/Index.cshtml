@@ -24,7 +24,7 @@
 
             <div class="imgDiv">
                 <ul class="product-ul">
-                    <li class="product-ul-li">
+                    <li class="product-ul-li" style="width: 100%;">
                         <div class="product-li-row">
                             <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Adı:</b></div>
                             <div class="product-li-row-text">@product.ProductName</div>
@@ -32,47 +32,47 @@
                         </div>
                     </li>
 
-                    <li class="product-ul-li">
+                    <li class="product-ul-li" style="width: 100%;">
                         <div class="product-li-row">
-                            <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Stok Kodu:</b></div>
+                            <div style="width: 60%; padding-left: 20px; " class="product-li-row-text"><b>Stok Kodu:</b></div>
                             <div class="product-li-row-text">@product.ProductStockCode</div>
                         </div>
                     </li>
 
-                    <li class="product-ul-li">
-                        <div class="product-li-row">
+                    <li class="product-ul-li" style="width: 100%;">
+                        <div class="product-li-row" >
                             <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Ürün Fiyatı</b></div>
                             <div class="product-li-row-text">@product.ProductPrice</div>
                         </div>
                     </li>
 
-                    <li class="product-ul-li">
-                        <div class="product-li-row">
+                    <li class="product-ul-li" style="width: 100%;">
+                        <div class="product-li-row" >
                             <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Stok Miktarı:</b></div>
                             <div class="product-li-row-text">@product.ProductStockAmount</div>
                         </div>
                     </li>
 
-                    <li class="product-ul-li">
-                        <div class="product-li-row">
+                    <li class="product-ul-li" style="width: 100%;">
+                        <div class="product-li-row" >
                             <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Marka:</b></div>
                             <div class="product-li-row-text">@product.Brand.BrandName</div>
                         </div>
                     </li>
 
-                    <li class="product-ul-li">
-                        <div class="product-li-row">
+                    <li class="product-ul-li" style="width: 100%;">
+                        <div class="product-li-row" >
                             <div style="width: 60%; padding-left: 20px;" class="product-li-row-text"><b>Açıklama:</b></div>
                             <div class="product-li-row-text">xxxaxxx</div>
                         </div>
                     </li>
 
-                    <li class="product-ul-li">
-                        <div class="product-li-row">
+                    <li class="product-ul-li" style="width: 100%;">
+                        <div class="product-li-row" style="text-align:center; width:300px" >
 
                             <div style="margin-top:5px;" class="product-li-row-text"><a class="buttonx" style="background-color:crimson;" href="/Product/Delete/@product.ProductId"><span><i class="fa-solid fa-trash"></i></span></a></div>
                             <div style="margin-top:5px;" class="product-li-row-text"><a class="buttonx" href="/Product/Update/@product.ProductId"><span><i class="fa-solid fa-pencil"></i></span></a></div>
-                            <div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx" style="background-color:cornflowerblue;"><span><i class="fa-solid fa-circle-nodes"></i></span></button></div>
+                            @*<div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx" style="background-color:cornflowerblue;"><span><i class="fa-solid fa-circle-nodes"></i></span></button></div>*@
                         </div>
                     </li>
 

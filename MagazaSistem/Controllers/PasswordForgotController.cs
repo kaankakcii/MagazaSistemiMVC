@@ -65,14 +65,14 @@ namespace MagazaSistem.Controllers
                        
 
                         mail.IsBodyHtml = true;
-                        mail.From = new MailAddress("miromagaza@gmail.com", "Şifre Yenileme İşlemi!");
+                        mail.From = new MailAddress("miromagaza@gmail.com", "Miro Mağaza Yönetimi!");
                         mail.To.Add(email);
                         mail.IsBodyHtml = true;
                         mail.Subject ="Sisteme Kayıtlı Olan Şifreniz.";
-                        mail.Body = "<b>Merhaha" + " "+name+" "+surname+" "+"şifreniz"+" </b>"+"<i>"+sifre+"</i>";
+                        mail.Body = "<b>Merhaha" + " "+name+" "+surname+" "+"şifreniz:"+" </b>"+"<i>"+sifre+"</i>";
                         smtp.Send(mail);
 
-                        return "Şifreniz kayıtlı olan e-mail adresinize gönderirdi!";
+                        return "Şifreniz kayıtlı mail adresinize gönderirdi!";
 
                     }
 

@@ -41,6 +41,43 @@ namespace MagazaSistem.Controllers
         
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+        [HttpGet]
+        public ActionResult Update(int id)
+        {
+            Color colors = db.Color.Find(id);
+
+            return View(colors);
+        }
+
+
+        [HttpPost]
+        public ActionResult Update(Color color, string renk)
+        {
+
+            Color colors = db.Color.Find(color.ColorId);
+            colors.colorHex = renk;
+            colors.ColorName = color.ColorName;
+            color.ColorStatus = true;
+            colors.ColorStatus = color.ColorStatus;
+
+            
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
+        }
         public ActionResult Delete(int id)
         {
 

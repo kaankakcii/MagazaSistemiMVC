@@ -15,6 +15,7 @@ namespace MagazaSistem.Controllers
         // GET: Product
         public ActionResult Index()
         {
+           
             List<Product> products = db.Product.Where(x => x.ProductStatus == true).ToList();
             
             
@@ -35,6 +36,7 @@ namespace MagazaSistem.Controllers
 
         [HttpGet]
         public ActionResult Add() {
+            
             /*Kategori*/
             List<SelectListItem> category = db.Category.AsNoTracking().Where(x => x.CategoryStatus == true)
                 .Select(s => new SelectListItem
@@ -80,38 +82,46 @@ namespace MagazaSistem.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(Product product){
-            product.ProductStatus = true;
-            Product products = new Product();
-            products.ProductStatus = product.ProductStatus;
-            products.ProductName = product.ProductName;
-            products.ProductStockCode = product.ProductStockCode;
-            products.ProductStockAmount = product.ProductStockAmount;
-            products.ProductPrice = product.ProductPrice;
-            products.ProductBarcode = product.ProductBarcode;
-            products.ProductDiscountedPrice = product.ProductDiscountedPrice;
-            products.ProductStatus = product.ProductStatus;
-            products.ProductPurchasePrice = product.ProductPurchasePrice;
+        public ActionResult Add(Product product) {
+           
+                product.ProductStatus = true;
+                Product products = new Product();
+                products.ProductStatus = product.ProductStatus;
+                products.ProductName = product.ProductName;
+                products.ProductStockCode = product.ProductStockCode;
+                products.ProductStockAmount = product.ProductStockAmount;
+                products.ProductPrice = product.ProductPrice;
+                products.ProductBarcode = product.ProductBarcode;
+                products.ProductDiscountedPrice = product.ProductDiscountedPrice;
+                products.ProductStatus = product.ProductStatus;
+                products.ProductPurchasePrice = product.ProductPurchasePrice;
 
-            products.Brand = db.Brand.Find(product.BrandId);
-            products.Category = db.Category.Find(product.CategoryId);
-            products.Subcategory = db.Subcategory.Find(product.SubcategoryId);
-            products.Color = db.Color.Find(product.ColorId);
+                products.Brand = db.Brand.Find(product.BrandId);
+                products.Category = db.Category.Find(product.CategoryId);
+                products.Subcategory = db.Subcategory.Find(product.SubcategoryId);
+                products.Color = db.Color.Find(product.ColorId);
 
-            if (Request.Files.Count > 0)
-            {
-                string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
-                
-                string yol = "~/Image/" + dosyaadi ;
-                Request.Files[0].SaveAs(Server.MapPath(yol));
-                product.ProductImage = "/Image/" + dosyaadi;
+                if (Request.Files.Count > 0)
+                {
+                    string dosyaadi = Path.GetFileName(Request.Files[0].FileName);
 
-            }
-          
-            db.Product.Add(product);
-            db.SaveChanges();
+                    string yol = "~/Image/" + dosyaadi;
+                    Request.Files[0].SaveAs(Server.MapPath(yol));
+                    product.ProductImage = "/Image/" + dosyaadi;
 
-            return RedirectToAction("Index");
+                }
+
+                db.Product.Add(product);
+                db.SaveChanges();
+
+                return RedirectToAction("Index");
+            
+        
+
+
+
+            
+            
         }
 
 
@@ -195,7 +205,7 @@ namespace MagazaSistem.Controllers
                 string uzanti = Path.GetExtension(Request.Files[0].FileName);
                 string yol = "~/Image/" + dosyaadi + uzanti;
                 Request.Files[0].SaveAs(Server.MapPath(yol));
-                product.ProductImage = "/Image/" + dosyaadi + uzanti;
+                products.ProductImage = "/Image/" + dosyaadi + uzanti;
 
             }
 

@@ -11,6 +11,8 @@ namespace MagazaSistem.Entites.Models
     {
         [Key]
         public int BrandId { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Marka İsmini Giriniz.")]
         public string BrandName { get; set; }
         public string BrandImgUrl { get; set; }
         public bool BrandStatus { get; set; }

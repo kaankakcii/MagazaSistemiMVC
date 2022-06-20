@@ -4,140 +4,136 @@
     Layout = "~/Views/Shared/_HomeLayout.cshtml";
 }
 <style>
-
 </style>
 
- 
-
-    @using (Html.BeginForm("Update", "Product", FormMethod.Post, new { enctype = "multipart/form-data"}))
-    {
-
-        <div class="productSaveBar" style="width:100%">
-            <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx" style="background-color: rgba(192, 29, 29, 0.963) "><span>İptal Et <i class="fa-solid fa-xmark"></i></span></button></div></div>
-            <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx"><span>Kaydet <i class="fa-regular fa-square-check"></i></span></button></div></div>
-            <div class="productSaveText"><p class="p">Güncelleme</p></div>
-        </div>
-
-        <div class="form-group">
-            <ul>
-
-                <li style="display:flex;">
-
-                    <div class="liLabelDivUpdate">@Html.LabelFor(x => x.ProductId)</div>
-
-                    <div class="liTextBoxDivUpdate">  @Html.TextBoxFor(x => x.ProductId, new { @class = "form-controlUpdate", @readonly = "readonly" })</div>
-                </li>
-
-                <li style="display:flex;">
-
-                    <div class="liLabelDivUpdate">@Html.Label("Ürün İsmi:")</div>
-
-                    <div class="liTextBoxDivUpdate">  @Html.TextBoxFor(x => x.ProductName, new { @class = "form-controlUpdate" })</div>
-                </li>
-
-                <li style="display:flex;">
-
-                    <div class="liLabelDivUpdate">
-                        @Html.Label("Stok Kodu: ")
-                    </div>
-
-                    <div class="liTextBoxDivUpdate">
-                        @Html.TextBoxFor(x => x.ProductStockCode, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
 
 
-                <li style="display:flex;">
+@using (Html.BeginForm("Update", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
 
-                    <div class="liLabelDivUpdate">@Html.Label("Stok Miktarı: ")</div>
-                    <div class="liTextBoxDivUpdate">
-                        @Html.TextBoxFor(x => x.ProductStockAmount, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
+    <div class="productSaveBar" style="width:100%">
+        <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx" style="background-color: rgba(192, 29, 29, 0.963) "><span>İptal Et <i class="fa-solid fa-xmark"></i></span></button></div></div>
+        <div class="productSaveButton"><div style="margin-top:5px;" class="product-li-row-text"><button class="buttonx"><span>Kaydet <i class="fa-regular fa-square-check"></i></span></button></div></div>
+        <div class="productSaveText"><p class="p">Güncelleme</p></div>
+    </div>
 
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">
-                        @Html.Label("Ürün Fiyatı: ")
-                    </div>
-                    <div class="liTextBoxDivUpdate">
-                        @Html.TextBoxFor(x => x.ProductPrice, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
+    <div class="form-group">
+        <ul>
 
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">@Html.Label("Ürün Barkodu: ")</div>
-                    <div class="liTextBoxDivUpdate">
-                        @Html.TextBoxFor(x => x.ProductBarcode, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
+            <li style="display:flex;">
 
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">@Html.Label("İndirimli Fiyatı: ")</div>
-                    <div class="liTextBoxDivUpdate">
-                        @Html.TextBoxFor(x => x.ProductDiscountedPrice, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
+                <div class="liLabelDivUpdate">@Html.LabelFor(x => x.ProductId)</div>
 
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">
-                        @Html.Label("Ürün Alış Fiyatı: ")
-                    </div>
-                    <div class="liTextBoxDivUpdate">
-                        @Html.TextBoxFor(x => x.ProductPurchasePrice, new { @class = "form-controlUpdate" })
-                    </div>
+                <div class="liTextBoxDivUpdate">  @Html.TextBoxFor(x => x.ProductId, new { @class = "form-controlUpdate", @readonly = "readonly" })</div>
+            </li>
+
+            <li style="display:flex;">
+
+                <div class="liLabelDivUpdate">@Html.Label("Ürün İsmi:")</div>
+
+                <div class="liTextBoxDivUpdate">  @Html.TextBoxFor(x => x.ProductName, new { @class = "form-controlUpdate" })</div>
+            </li>
+
+            <li style="display:flex;">
+
+                <div class="liLabelDivUpdate">
+                    @Html.Label("Stok Kodu: ")
+                </div>
+
+                <div class="liTextBoxDivUpdate">
+                    @Html.TextBoxFor(x => x.ProductStockCode, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
 
 
-                </li>
+            <li style="display:flex;">
 
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">
-                        @Html.Label("Kategori: ")
-                    </div>
-                    <div class="liTextBoxDivUpdate">
-                        @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.Categories, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
+                <div class="liLabelDivUpdate">@Html.Label("Stok Miktarı: ")</div>
+                <div class="liTextBoxDivUpdate">
+                    @Html.TextBoxFor(x => x.ProductStockAmount, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
+
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">
+                    @Html.Label("Ürün Fiyatı: ")
+                </div>
+                <div class="liTextBoxDivUpdate">
+                    @Html.TextBoxFor(x => x.ProductPrice, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
+
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">@Html.Label("Ürün Barkodu: ")</div>
+                <div class="liTextBoxDivUpdate">
+                    @Html.TextBoxFor(x => x.ProductBarcode, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
+
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">@Html.Label("İndirimli Fiyatı: ")</div>
+                <div class="liTextBoxDivUpdate">
+                    @Html.TextBoxFor(x => x.ProductDiscountedPrice, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
+
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">
+                    @Html.Label("Ürün Alış Fiyatı: ")
+                </div>
+                <div class="liTextBoxDivUpdate">
+                    @Html.TextBoxFor(x => x.ProductPurchasePrice, new { @class = "form-controlUpdate" })
+                </div>
 
 
+            </li>
+
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">
+                    @Html.Label("Kategori: ")
+                </div>
+                <div class="liTextBoxDivUpdate">
+                    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.Categories, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
 
 
 
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">
-                        @Html.Label("Marka: ")
-                    </div>
-                    <div class="liTextBoxDivUpdate">
-                        @Html.DropDownListFor(x => x.BrandId, (List<SelectListItem>)ViewBag.Brands, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">
-                        @Html.Label("Renk: ")
-                    </div>
-                    <div class="liTextBoxDiv">
-                        @Html.DropDownListFor(x => x.ColorId, (List<SelectListItem>)ViewBag.Colors, new { @class = "form-controlUpdate" })
-                    </div>
-                </li>
-                <li style="display:flex;">
-                    <div class="liLabelDivUpdate">
-                        Resim:
-                    </div>
-                    <div class="liTextBoxDivUpdate">
-                        <input type="file" />
-                       
-                    </div>
-                    
-
-                </li>
 
 
-            </ul>
-        </div>
-    }
-   
-    <div><img src=@Session["img"].ToString() height="700px" width="500px"</div>
-</div>
-</body>
-</html>
-</body>
-</html>
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">
+                    @Html.Label("Marka: ")
+                </div>
+                <div class="liTextBoxDivUpdate">
+                    @Html.DropDownListFor(x => x.BrandId, (List<SelectListItem>)ViewBag.Brands, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">
+                    @Html.Label("Renk: ")
+                </div>
+                <div class="liTextBoxDiv">
+                    @Html.DropDownListFor(x => x.ColorId, (List<SelectListItem>)ViewBag.Colors, new { @class = "form-controlUpdate" })
+                </div>
+            </li>
+            <li style="display:flex;">
+                <div class="liLabelDivUpdate">
+                    Resim:
+                </div>
+                <div class="liTextBoxDivUpdate">
+                    <input type="file" />
+
+                </div>
+
+
+            </li>
+
+
+        </ul>
+    </div>
+}
+
+<div><img src=@Session["img"].ToString() height="700px" width="500px"</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")

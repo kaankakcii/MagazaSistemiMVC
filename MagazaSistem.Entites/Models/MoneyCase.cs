@@ -11,6 +11,8 @@ namespace MagazaSistem.Entites.Models
     {
         [Key]
         public int MoneyCaseId { get; set; }
+
+        [Required(ErrorMessage = "Lütfen Kasa İsmi İsmini Giriniz.")]
         public string MoneyCaseName { get; set; }
         public string MoneyCaseAdres { get; set; }
         public bool MoneyCaseStatus { get; set; }

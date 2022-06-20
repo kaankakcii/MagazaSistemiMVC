@@ -6,7 +6,7 @@
 }
 <div style="width:auto; height:auto">
 
-    @using (Html.BeginForm("Add", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("Update", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
 
         <div class="productSaveBar">
@@ -17,6 +17,12 @@
 
         <div class="form-groupAdd">
             <ul>
+                <li style="display:flex;">
+
+                    <div class="liLabelDivUpdate">@Html.LabelFor(x => x.CategoryId)</div>
+
+                    <div class="liTextBoxDivUpdate">  @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-controlUpdate", @readonly = "readonly" })</div>
+                </li>
 
                 <li style="display:flex;">
 

@@ -1,4 +1,5 @@
-﻿@model MagazaSistem.Entites.Models.Color
+﻿
+@model MagazaSistem.Entites.Models.Color
 
 @{
     ViewBag.Title = "Add";
@@ -19,7 +20,7 @@
 </script>
 <div style="width:auto; height:auto">
 
-    @using (Html.BeginForm("Add", "Color", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("Update", "Color", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
 
         <div class="productSaveBar">
@@ -30,6 +31,12 @@
 
         <div class="form-groupAdd">
             <ul>
+                <li style="display:flex;">
+
+                    <div class="liLabelDivUpdate">@Html.LabelFor(x => x.ColorId)</div>
+
+                    <div class="liTextBoxDivUpdate">  @Html.TextBoxFor(x => x.ColorId, new { @class = "form-controlUpdate", @readonly = "readonly" })</div>
+                </li>
 
                 <li style="display:flex;">
 

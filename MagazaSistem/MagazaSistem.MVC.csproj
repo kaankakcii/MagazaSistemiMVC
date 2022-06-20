@@ -259,6 +259,10 @@
     <Content Include="Views\MoneyCase\InvoiceListe.cshtml" />
     <Content Include="Views\MoneyCase\addMoneyCase.cshtml" />
     <Content Include="Views\PasswordForgot\Index.cshtml" />
+    <Content Include="Views\Brand\Update.cshtml" />
+    <Content Include="Views\Category\Update.cshtml" />
+    <Content Include="Views\Color\Update.cshtml" />
+    <Content Include="Views\Subcategory\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

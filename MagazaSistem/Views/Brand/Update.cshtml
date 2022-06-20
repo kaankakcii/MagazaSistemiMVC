@@ -1,4 +1,5 @@
-﻿@model MagazaSistem.Entites.Models.Brand
+﻿
+@model MagazaSistem.Entites.Models.Brand
 
 @{
     ViewBag.Title = "Add";
@@ -6,7 +7,7 @@
 }
 <div style="width:auto; height:auto">
 
-    @using (Html.BeginForm("Add", "Brand", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("Update", "Brand", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
 
         <div class="productSaveBar">
@@ -17,7 +18,12 @@
 
         <div class="form-groupAdd">
             <ul>
+                <li style="display:flex;">
 
+                    <div class="liLabelDivUpdate">@Html.LabelFor(x => x.BrandId)</div>
+
+                    <div class="liTextBoxDivUpdate">  @Html.TextBoxFor(x => x.BrandId, new { @class = "form-controlUpdate", @readonly = "readonly" })</div>
+                </li>
                 <li style="display:flex;">
 
                     <div class="liLabelDivAdd">
